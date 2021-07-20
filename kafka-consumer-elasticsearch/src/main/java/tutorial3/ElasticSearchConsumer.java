@@ -14,7 +14,6 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
-import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestClientBuilder;
@@ -30,7 +29,7 @@ import java.util.Properties;
 
 public class ElasticSearchConsumer {
 
-    private static JsonParser parser = new JsonParser();
+    private static final JsonParser parser = new JsonParser();
 
     private static RestHighLevelClient createClient() {
 
